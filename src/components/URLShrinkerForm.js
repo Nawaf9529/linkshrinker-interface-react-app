@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./URLShrinker.css";
+import Button from "./Button";
 const URLShrinkerForm = ()=>{
 
 function handleClick(){
@@ -28,7 +29,7 @@ return(
     <label htmlFor="shortCode">Enter short code:</label>
     <input id="shortCode" type="text" onChange={(e) => {setShortCode(e.target.value);}} value={shortCode}/>
     </div>
-    <button id="btn" onClick={handleClick}>shorten</button>
+    <Button handler={handleClick} title="shorten"/>
     <div className="result">
     <div className="form-group3">
     <label htmlFor="shortUrl">Short URL:</label>
